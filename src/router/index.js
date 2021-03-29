@@ -20,6 +20,7 @@ export default new Router({
     {
       path: '/ad/:id',
       name: 'ad',
+      props: true,
       component: Ad
     },
     {
@@ -50,5 +51,3 @@ export default new Router({
   ],
   mode: 'history'
 })
-
-/* eslint-disable */

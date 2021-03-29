@@ -75,13 +75,13 @@ export default {
   methods: {
     createAd () {
       if (this.$refs.form.validate()) {
-        //
         const ad = {
           title: this.title,
           description: this.description,
-          promo: this.promo
+          promo: this.promo,
+          imageSrc: 'https://miro.medium.com/max/2000/1*XH9l-6x9SUlmGxPlZFaoIA.jpeg'
         }
-        console.log(ad)
+        this.$store.dispatch('createAd', ad)
       }
     }
   }
