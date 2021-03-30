@@ -56,6 +56,7 @@
 </template>
 
 <script>
+
 export default {
   data () {
     return {
@@ -85,7 +86,6 @@ export default {
           password: this.password
         }
         this.$store.dispatch('registerUser', user)
-        console.log(user)
       }
     }
   }

@@ -1,7 +1,7 @@
 import firebase from 'firebase'
 
 class User {
-  constructor(id) {
+  constructor (id) {
     this.id = id
   }
 }
@@ -18,7 +18,7 @@ export default {
   actions: {
     registerUser ({commit}, {email, password}) {
       firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then(user => {
+        .then((user) => {
           commit('setUser', new User(user.uid))
         })
     }
