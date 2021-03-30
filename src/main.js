@@ -26,5 +26,10 @@ new Vue({
       storageBucket: 'ads-app.appspot.com',
       messagingSenderId: '65761200833'
     })
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        this.$store.dispatch('autoLoginUser', user)
+      }
+    })
   }
 })
