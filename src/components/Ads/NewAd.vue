@@ -35,7 +35,7 @@
         </v-layout>
         <v-layout row>
           <v-flex xs12>
-            <img src="" alt="img" height="100">
+<!--            <img src="" alt="img" height="100">-->
           </v-flex>
         </v-layout>
         <v-layout row>
