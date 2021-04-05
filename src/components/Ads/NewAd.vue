@@ -51,9 +51,10 @@
           <v-flex xs12>
             <v-spacer></v-spacer>
             <v-btn
+              :loading="loading"
               class="success"
               @click="createAd"
-              :disabled="!valid">
+              :disabled="!valid || loading">
               Create add</v-btn>
           </v-flex>
         </v-layout>
@@ -72,6 +73,11 @@ export default {
       valid: false
     }
   },
+  computed: {
+    loading () {
+      return this.$store.getters.loading
+    }
+  },
   methods: {
     createAd () {
       if (this.$refs.form.validate()) {
@@ -82,6 +88,10 @@ export default {
           imageSrc: 'https://miro.medium.com/max/2000/1*XH9l-6x9SUlmGxPlZFaoIA.jpeg'
         }
         this.$store.dispatch('createAd', ad)
+        .then(() => {
+          this.$router.push('/list')
+        })
+        .catch(() => {})
       }
     }
   }

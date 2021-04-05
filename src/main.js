@@ -20,10 +20,10 @@ new Vue({
   created () {
     firebase.initializeApp({
       apiKey: 'AIzaSyACdTFyTBFRfMLwl8i48MgVWVlasRvL1ok',
-      authDomain: 'ads-app.firebaseapp.com',
-      databaseURL: 'https://ads-app.firebaseio.com',
       projectId: 'ads-app-c343c',
-      storageBucket: 'ads-app.appspot.com',
+      authDomain: 'ads-app-c343c.firebaseapp.com',
+      databaseURL: 'https://ads-app-c343c-default-rtdb.europe-west1.firebasedatabase.app/',
+      storageBucket: 'ads-app-c343c.appspot.com',
       messagingSenderId: '65761200833'
     })
     firebase.auth().onAuthStateChanged(user => {

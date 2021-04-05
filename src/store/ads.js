@@ -54,8 +54,13 @@ export default {
           payload.imageSrc,
           payload.promo
         )
-        const fbValue = await firebase.database().ref('ads').push(newAd)
-        console.log(fbValue)
+        const ad = await firebase.database().ref('ads').push(newAd)
+        console.log(ad)
+        commit('setLoading', false)
+        commit('createAd', {
+          ...newAd,
+          id: ad.key
+        })
       } catch (error) {
         commit('setError', error.message)
         commit('setLoading', false)
