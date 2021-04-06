@@ -24,7 +24,7 @@
               <v-card-actions>
                 <v-spacer></v-spacer>
                 <v-btn
-                  class="info"
+                  class="success"
                   :to="'/ad/' + ad.id">
                   Open
                 </v-btn>

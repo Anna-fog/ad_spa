@@ -10,7 +10,7 @@
             :src="ad.imageSrc"
             >
               <div class="car-link">
-                <v-btn class="error" :to="'/ad/' + ad.id">{{ ad.title }}</v-btn>
+                <v-btn class="success" :to="'/ad/' + ad.id">{{ ad.title }}</v-btn>
               </div>
             </v-carousel-item>
           </v-carousel>

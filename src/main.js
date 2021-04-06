@@ -6,8 +6,15 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import firebase from 'firebase'
 import BuyModal from './components/Shared/BuyModal'
+import colors from 'vuetify/es5/util/colors'
 
-Vue.use(Vuetify)
+Vue.use(Vuetify, {
+  theme: {
+    primary: colors.indigo.accent2,
+    success: colors.indigo.accent3,
+    warning: colors.blueGrey.darken1
+  }
+})
 Vue.component('BuyModal', BuyModal)
 Vue.config.productionTip = false
 
