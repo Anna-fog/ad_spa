@@ -42,7 +42,7 @@
         </v-layout>
         <v-layout row>
           <v-flex xs12>
-            <img v-if="imageSrc" :src="imageSrc" alt="img" height="100">
+            <img :src="imageSrc" alt="img" height="100" v-if="imageSrc">
           </v-flex>
         </v-layout>
         <v-layout row>
