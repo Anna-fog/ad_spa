@@ -65,10 +65,8 @@ export default {
         const ad = await firebase.database().ref('ads').push(newAd)
         const imageExt = image.name.slice(image.name.lastIndexOf('.'))
 
-        const fileData = await firebase.storage().ref(`ads/${ad.key}.${imageExt}`).put(image)
+        const fileData = await firebase.storage().ref().child(`ads/${ad.key}.${imageExt}`).put(image)
         const imageSrc = await fileData.ref.getDownloadURL()
-        // console.log(`Create imgScr: ${imageSrc}`)
-        // const imageSrc = await firebase.storage().ref().child(fileData.ref.fullPath).getDownloadURL()
 
         await firebase.database().ref('ads').child(ad.key).update({
           imageSrc
@@ -98,7 +96,6 @@ export default {
 
         Object.keys(ads).forEach(key => {
           const ad = ads[key]
-          // console.log(ad.title, ad.description, ad.imageSrc)
           resultAds.push(
             new Ad(ad.title, ad.description, ad.ownerId, ad.imageSrc, ad.promo, key)
         )

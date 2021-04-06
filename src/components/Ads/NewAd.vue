@@ -112,7 +112,6 @@ export default {
       reader.onload = e => {
         this.imageSrc = reader.result
       }
-      // console.log(`onFileChange: ${this.imageSrc}`)
       reader.readAsDataURL(file)
       this.image = file
     }
