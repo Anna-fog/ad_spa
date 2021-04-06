@@ -5,9 +5,10 @@ import store from './store'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import firebase from 'firebase'
+import BuyModal from './components/Shared/BuyModal'
 
 Vue.use(Vuetify)
-
+Vue.component('BuyModal', BuyModal)
 Vue.config.productionTip = false
 
 // eslint-disable-next-line
