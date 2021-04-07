@@ -10,7 +10,7 @@
       </v-flex>
       <v-flex xs12 sm6 offset-sm3 v-else-if="!loading && orders.length !== 0">
         <h1 class="text--secondary mb-3">Orders</h1>
-        <v-list subheader two-line class="elevation-10">
+        <v-list subheader two-line class="elevation-2">
           <v-list-tile
           avatar
           v-for="order in orders"

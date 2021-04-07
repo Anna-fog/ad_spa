@@ -127,6 +127,12 @@ export default {
   .v-content__wrap {
     background-color: #e4ebfb;
   }
+  .v-card {
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 1%), 0 2px 2px 0 rgb(0 0 0 / 4%), 0 1px 5px 0 rgb(0 0 0 / 10%);
+  }
+  .v-toolbar {
+    box-shadow: 0 2px 4px -1px rgb(0 0 0 / 10%), 0 4px 5px 0 rgb(0 0 0 / 9%), 0 1px 10px 0 rgb(0 0 0 / 9%);
+  }
   .pointer {
     cursor: pointer;
   }
