@@ -21,7 +21,7 @@
         @click="onLogout"
         v-if="isUserLoggedIn">
           <v-list-tile-action>
-            <v-icon>exit_to_ap</v-icon>
+            <v-icon>exit_to_app</v-icon>
           </v-list-tile-action>
 
           <v-list-tile-content>
@@ -54,7 +54,7 @@
           @click="onLogout"
           flat
           v-if="isUserLoggedIn">
-          <v-icon left>exit_to_ap</v-icon>
+          <v-icon left>exit_to_app</v-icon>
           Logout
         </v-btn>
       </v-toolbar-items>
