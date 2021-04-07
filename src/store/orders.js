@@ -61,17 +61,20 @@ export default {
         commit('setError', error.message)
         throw error
       }
+    },
+    async markOrderUndone ({commit, getters}, payload) {
+      commit('clearError')
+      try {
+        await firebase.database().ref(`/users/${getters.user.id}/orders`).child(payload).update({done: false})
+      } catch (error) {
+        commit('setError', error.message)
+        throw error
+      }
     }
   },
   getters: {
-    doneOrders (state) {
-      return state.orders.filter(order => order.done)
-    },
-    undoneOrders (state) {
-      return state.orders.filter(order => !order.done)
-    },
-    orders (state, getters) {
-      return [...getters.undoneOrders, ...getters.doneOrders]
+    orders (state) {
+      return state.orders
     }
   }
 }

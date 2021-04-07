@@ -54,11 +54,20 @@ export default {
   },
   methods: {
     markDone (order) {
-      this.$store.dispatch('markOrderDone', order.id)
-      .then(() => {
-        order.done = true
-      })
-      .catch(() => {})
+      if (order.done === false) {
+        this.$store.dispatch('markOrderDone', order.id)
+          .then(() => {
+            order.done = !order.done
+            console.log(order.done)
+          })
+          .catch(() => {})
+      } else {
+        this.$store.dispatch('markOrderUndone', order.id)
+          .then(() => {
+            order.done = !order.done
+          })
+          .catch(() => {})
+      }
     }
   },
   created () {
