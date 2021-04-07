@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="bg">
     <v-navigation-drawer app temporary v-model="drawer">
       <v-list>
         <v-list-tile
@@ -123,7 +123,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+  .v-content__wrap {
+    background-color: #e4ebfb;
+  }
   .pointer {
     cursor: pointer;
   }

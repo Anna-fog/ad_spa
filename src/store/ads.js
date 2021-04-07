@@ -76,14 +76,12 @@ export default {
       try {
         const fbVal = await firebase.database().ref('ads').once('value')
         const ads = fbVal.val()
-
         Object.keys(ads).forEach(key => {
           const ad = ads[key]
           resultAds.push(
             new Ad(ad.title, ad.description, ad.ownerId, ad.imageSrc, ad.promo, key)
         )
         })
-
         commit('loadAds', resultAds)
         commit('setLoading', false)
       } catch (error) {

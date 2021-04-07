@@ -14,7 +14,7 @@
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <EditAdModal :ad="ad" v-if="isOwner"></EditAdModal>
+            <EditAdModal :ad="ad" v-if="isOwner"></EditAdModal>V
             <BuyModal :ad="ad"></BuyModal>
           </v-card-actions>
         </v-card>
