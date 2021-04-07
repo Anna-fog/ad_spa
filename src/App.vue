@@ -133,6 +133,24 @@ export default {
   .v-toolbar {
     box-shadow: 0 2px 4px -1px rgb(0 0 0 / 10%), 0 4px 5px 0 rgb(0 0 0 / 9%), 0 1px 10px 0 rgb(0 0 0 / 9%);
   }
+  .v-list {
+    border-radius: 10px;
+  }
+  .v-window-item {
+    background-color: #e4ebfb;
+  }
+  /*.v-image__image--cover {*/
+  /*  border-radius: 10px 0 0 10px;*/
+  /*}*/
+  .home-ad {
+    border-radius: 10px 10px 0 0;
+  }
+  .list-ad {
+    border-radius: 10px 0 0 10px;
+  }
+  .v-sheet {
+    border-radius: 10px;
+  }
   .pointer {
     cursor: pointer;
   }

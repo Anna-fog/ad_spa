@@ -30,6 +30,7 @@
             <v-img
               :src="ad.imageSrc"
               height="200px"
+              class="home-ad"
             ></v-img>
 
             <v-card-title primary-title>

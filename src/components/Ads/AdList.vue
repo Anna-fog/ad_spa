@@ -12,6 +12,7 @@
           <v-layout row>
             <v-flex xs4>
               <v-img
+                class="list-ad"
                :src="ad.imageSrc"
                height="155px">
               </v-img>
