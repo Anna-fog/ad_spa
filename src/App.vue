@@ -139,9 +139,6 @@ export default {
   .v-window-item {
     background-color: #e4ebfb;
   }
-  /*.v-image__image--cover {*/
-  /*  border-radius: 10px 0 0 10px;*/
-  /*}*/
   .home-ad {
     border-radius: 10px 10px 0 0;
   }
@@ -149,7 +146,7 @@ export default {
     border-radius: 10px 0 0 10px;
   }
   .v-sheet {
-    border-radius: 10px;
+    border-radius: 10px !important;
   }
   .pointer {
     cursor: pointer;
