@@ -3,18 +3,18 @@
     <v-layout row>
       <v-flex xs12>
         <v-card v-if="!loading">
-          <v-card-media
+          <v-img
             :src="ad.imageSrc"
             height="300px"
           >
-          </v-card-media>
+          </v-img>
           <v-card-text>
             <h1 class="text--primary">{{ ad.title }}</h1>
             <p>{{ ad.description }}</p>
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <EditAdModal :ad="ad" v-if="isOwner"></EditAdModal>V
+            <EditAdModal :ad="ad" v-if="isOwner"></EditAdModal>
             <BuyModal :ad="ad"></BuyModal>
           </v-card-actions>
         </v-card>

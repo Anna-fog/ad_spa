@@ -14,19 +14,21 @@
         <v-layout row>
           <v-flex xs12>
             <v-card-text>
-              <v-text-field
+              <v-textarea
                 name="title"
                 label="Title"
                 type="text"
+                rows="1"
                 v-model="editedTitle">
-              </v-text-field>
-              <v-text-field
+              </v-textarea>
+              <v-textarea
                 name="description"
                 label="Description"
                 type="text"
+                rows="5"
                 multi-line
                 v-model="editedDescription">
-              </v-text-field>
+              </v-textarea>
             </v-card-text>
           </v-flex>
         </v-layout>

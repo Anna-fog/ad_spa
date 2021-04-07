@@ -124,7 +124,7 @@ export default {
       })
     },
     adsById (state) {
-      return adId => {
+      return (adId) => {
         return state.ads.find(ad => ad.id === adId)
       }
     }

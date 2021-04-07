@@ -8,22 +8,23 @@
           v-model="valid"
           validation
           class="mb-3">
-          <v-text-field
+          <v-textarea
             name="title"
             label="Ad title"
             type="text"
             required
+            rows="1"
             :rules="[v => !!v || 'Title is required']"
             v-model="title">
-          </v-text-field>
-          <v-text-field
+          </v-textarea>
+          <v-textarea
             name="description"
             label="Ad description"
             type="text"
             multi-line
             :rules="[v => !!v || 'Description is required']"
             v-model="description">
-          </v-text-field>
+          </v-textarea>
         </v-form>
         <v-layout row class="mb-3">
           <v-flex xs12>

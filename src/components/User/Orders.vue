@@ -58,7 +58,6 @@ export default {
         this.$store.dispatch('markOrderDone', order.id)
           .then(() => {
             order.done = !order.done
-            console.log(order.done)
           })
           .catch(() => {})
       } else {

@@ -14,18 +14,20 @@
         <v-layout row>
           <v-flex xs12>
             <v-card-text>
-              <v-text-field
+              <v-textarea
                 name="name"
                 label="Your name"
                 type="text"
+                rows="1"
                 v-model="name">
-              </v-text-field>
-              <v-text-field
+              </v-textarea>
+              <v-textarea
                 name="phone"
                 label="Your phone"
                 type="text"
+                rows="1"
                 v-model="phone">
-              </v-text-field>
+              </v-textarea>
             </v-card-text>
           </v-flex>
         </v-layout>

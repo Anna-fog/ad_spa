@@ -12,23 +12,25 @@
               ref="form"
               v-model="valid"
               validation>
-              <v-text-field
+              <v-textarea
                 prepend-icon="person"
                 name="email"
                 label="Email"
                 type="email"
+                rows="1"
                 :rules="emailRules"
                 v-model="email">
-              </v-text-field>
-              <v-text-field
+              </v-textarea>
+              <v-textarea
                 prepend-icon="lock"
                 name="password"
                 label="Password"
                 type="password"
+                rows="1"
                 :counter="6"
                 :rules="passwordRules"
                 v-model="password">
-              </v-text-field>
+              </v-textarea>
             </v-form>
           </v-card-text>
           <v-card-actions>
